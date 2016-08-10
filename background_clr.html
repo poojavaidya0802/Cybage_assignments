@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>Background color</title>
+		<style>
+			.color{
+				width: 170px;
+  				height: 30px;
+				color: #fff;
+				font: 14px timesnewroman;
+				background-color:#53868B;
+				border:1px solid black;
+				border-radius:10px;
+			}
+		</style>
+	</head>
+	<body>
+		<center>
+			<h1>Background Color Change</h1>
+			<img src="image.jpg"><br><br>
+			<select class="color" id="color" onchange="func()">
+				<option value="purple">Purple</option>
+				<option value="palegreen">Pale Green</option>
+				<option value="lime">Lime</option>
+				<option value="Peru">Peru</option>
+				<option value="Plum">Plum</option>
+				<option value="salmon">Salmon</option>
+				<option value="moccasin">Moccasin</option>
+				<option value="teal">Teal</option>
+				<option value="cyan">Cyan</option>
+				<option value="crimson">Crimson</option>
+				<option value="crimson">Crimson</option>
+			</select>
+
+			<script>
+				function func(){
+					var col=document.getElementById("color").value;
+					document.body.style.backgroundColor = col;
+				}	
+			</script>
+		</center>
+	</body>
+</html>
