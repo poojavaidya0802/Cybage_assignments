@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link href="style.css" type="text/css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	</head>
+	<body>
+		<header>
+			<section class="logo"></section>
+			<nav>
+				<ul id="main_ops">
+					<li id="buy">Buy</li>
+					<li id="sell">Sell</li>
+					<li id="send">Send</li>
+					<li id="business">Business</li>
+				</ul>
+			</nav>
+			<section class="buttons">
+				<button class="login">Log In</button>
+				<button class="signup">Sign Up</button>	
+			</section>
+		</header>
+
+		<div class="clearfix" id="div1">
+			<ul id="first">
+				<li class="col1">Pay on eBay</li>
+				<li class="col2">Pay on the go</li>
+			</ul>
+			<ul id="second">
+				<li class="col1">Pay on Websites</li>
+				<li class="col2">More ways to use us</li>
+			</ul>	
+		</div>
+	
+		<div class="clearfix" id="div2">
+			<ul id="first">
+				<li class="col1">Get paid on your website</li>
+				<li class="col2">Solutions for your business</li>
+			</ul>
+			<ul id="second">
+				<li class="col1">Email an invoice</li>
+				<li class="col2">Request a payment</li>
+			</ul>	
+		</div>
+
+		<div class="clearfix" id="div3">
+			<center>
+				<p>Send a payment in few clicks</p>
+				<input type="email" value="Email" class="email" size="37">
+					
+				<input value="Amount" class="amount" size="7">
+				<select class="sel">
+					<option>USD</option>
+					<option>ALL</option>
+					<option>AUD</option>
+					<option>BRL</option>
+					<option>CAD</option>
+					<option>CHF</option>
+				</select>
+				
+				<button class="cont">Continue</button>	
+			</center>
+		</div>
+		
+		<script>
+			$(document).ready(function() {
+				$('#buy').click(function() {
+					//$('#buy').css("color","#0099CC");
+					$("#div2").hide();
+					$("#div3").hide();
+					$("#div1").slideToggle('normal') //Shows Nav area
+				}); //end of myNav
+				
+				$('#sell').click(function() {
+					$("#div1").hide();
+					$("#div3").hide();
+					$("#div2").slideToggle('normal') //Shows Nav area
+				}); 
+				
+				$('#send').click(function() {
+					$("#div1").hide();
+					$("#div2").hide();
+					$("#div3").slideToggle('normal') //Shows Nav area
+				});
+			}); //end of ready
+		</script>
+	</body>
+</html>

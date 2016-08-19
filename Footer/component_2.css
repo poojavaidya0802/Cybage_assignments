@@ -1,0 +1,72 @@
+.head{
+	background-color:blue;
+	height:100px;
+	text-align:center;
+	color:white;
+}
+
+.sec{
+	background-color:cyan;
+	height:200px;
+	color:white;
+	text-align:center;
+}
+
+.foot{
+	background-image:url("wallpaper.jpg");
+	background-repeat:no-repeat;
+	height:500px;
+	padding-top:20px;
+}
+
+.contents{
+	width:700px;
+	height:300px;
+	margin:auto;
+}
+
+.drop_down{
+	margin-top:20px;
+	margin-left:20px;
+	float:left;
+}
+
+.drop_down select{
+	background-color:rgb(51,51,51);
+	color:white;
+	height:35px;
+	min-width:150px;
+	margin-bottom:10px;
+	border-radius:5px;
+	border-color:rgb(51,51,51);
+}
+
+.company,.discover,.hosting{
+	float:left;
+	width: 100px;
+	color:white;
+	margin-left:50px;
+}
+
+ul{
+	list-style-type:none;
+	padding-left:0;
+}
+
+hr{
+	width:700px;
+}
+
+.join{
+	text-align:center;
+	color:white;
+}
+
+.join ul li{
+	display:inline-block;
+	height:36px;
+	width:36px;
+	margin:10px;
+	border:1px solid white;
+	border-radius:50%;
+}
