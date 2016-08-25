@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Calculator</title>
+		<link rel="stylesheet" href="calc.css">
+	</head>
+	<body>
+		<center>
+			<h2>Calculator</h2>
+			<div class="Wrapper">	
+				<div class="screen" id="screen">
+					
+				</div>
+				<div class="keypad">
+					<button value="7" onclick="calculate(this)">7</button>
+					<button value="8">8</button>
+					<button value="9">9</button>
+					<button value="/">/</button><br>	
+					<button value="4">4</button>
+					<button value="5">5</button>
+					<button value="6">6</button>
+					<button value="*">*</button><br>
+					<button value="1">1</button>
+					<button value="2">2</button>
+					<button value="3">3</button>
+					<button value="-">-</button><br>
+					<button value="0">0</button>
+					<button value=".">.</button>
+					<button value="=">=</button>
+					<button value="+">+</button><br>
+					<button value="reset" type="reset">Reset</button>		
+				</div>
+			</div>
+		</center>
+
+		<script>
+			/*function calculate(elem){
+				concole.log(elem.value);
+			}*/
+			var buttons = document.getElementsByTagName('button');
+			for (var i = 0, len = buttons.length; i < len; i++) {
+				buttons[i].onclick = function (){
+					var first_no;
+					var second_no;
+					if((this.value)=="reset"){
+						document.getElementById("screen").innerHTML=" ";
+					}
+					else{
+						document.getElementById("screen").innerHTML += this.value;
+						first_no = document.getElementById("screen").innerHTML;
+						console.log(first_no);
+					}
+				}
+			}
+		</script>		
+	</body>
+</html>

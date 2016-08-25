@@ -1,0 +1,22 @@
+.Wrapper{
+	height:300px;
+	width:300px;
+	background-color:#eee;
+	padding:25px;
+}
+
+.screen{
+	height:50px;
+	background-color:white;
+	margin-bottom:25px;
+}
+
+.keypad{
+	height:auto;
+}
+
+.keypad button{
+	width:65px;
+	height:40px;
+	margin:3px;
+}
