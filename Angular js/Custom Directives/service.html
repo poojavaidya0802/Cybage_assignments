@@ -1,0 +1,23 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+	<script src="script.js"></script>
+</head>
+<body ng-app="bindExample">
+	Enter a number
+	<input type="number" ng-model="number" value="Enter a number">
+	<button ng-click="Calculator.square">x<sup>2</button>
+	<div></div>
+		
+	<script>	
+		var CalculatorService = angular.module('CalculatorService', [])
+			.service('Calculator', function () {
+				this.square = function (a){ 
+					return a*a
+				};
+			});
+		
+	</script>	
+</body>
+</html>

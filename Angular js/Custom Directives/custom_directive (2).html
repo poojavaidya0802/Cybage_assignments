@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Custom Directive</title>
+	</head>
+	
+	<body ng-app="myApp">
+		<h2>AngularJS Sample App</h2>
+		
+		<div ng-controller="StudentController">
+			<student name="Student1"></student><br/>
+			<student name="Student2"></student>
+		
+		</div>
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+		
+		<script>
+			var myApp = angular.module("myApp" ,[]);
+			myApp.controller('StudentController',function($scope){
+			$scope.Student1={fname:'Neha' , empid:'101'};
+			$scope.Student2={fname:'Ipsha' , empid:'102'};
+			});
+			
+			myApp.directive('student' , function(){
+				return{
+				restrict: 'E',
+				scope: {
+				studentinfo: '=name'
+				},
+				template: 'Name: {{studentinfo.fname}} EmpId: {{studentinfo.empid}}'
+					//templateURL: 'cust.html'
+				};
+			});
+		</script>
+	
+	</body>
+
+</html>

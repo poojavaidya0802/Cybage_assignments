@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+   <meta charset="UTF-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+  </head>
+
+  <body ng-app='myApp'>
+   <script>
+		var app = angular.module("myApp", ['ngRoute'])
+		app.config(['$routeProvider',function($routeProvider) {
+		$routeProvider
+		.when("/",{
+					templateUrl:"ng-routemain.html",
+					})
+		.when("/london",{
+					templateUrl:"london.html",
+					controller:"londonCtrl"
+					})
+		.when("/paris",{
+					templateUrl:"paris.html",
+					controller:"parisCtrl"
+					});
+											
+		
+
+  
+}]);
+   app.controller("londonCtrl",function($scope)
+	{
+			$scope.msg="I love London";
+	}
+   );
+   
+   app.controller("parisCtrl",function($scope)
+	{
+			$scope.msg="I love Paris";
+	}
+   );
+   
+   </script>
+   
+   
+   
+   
+    <h1>Routing Here!!</h1>
+	<h3>Click on the links below and you will be routed to that page...</h3>
+	<ul>
+
+	<li><a href="#/">Main Page</a></li>
+	<li><a href="#london">London</a></li>
+	<li><a href="#paris">Paris</a></li>
+	</ul>
+	
+    <div ng-view></div>
+      
+  </body>
+
+</html>

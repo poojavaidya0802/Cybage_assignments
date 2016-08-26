@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+ <!-- <script src="script.js"></script>-->
+</head>
+
+<body ng-app="bindExample">
+
+	<script>
+		angular.module('bindExample',[])
+  .controller('ExampleController',['$scope',function($scope){
+    $scope.friends=[{name:'John',phone:'555-1267'},
+                    {name:'Mary',phone:'555-1345'},
+                    {name:'Mike',phone:'555-1547'},
+                    {name:'Adam',phone:'555-2345'},
+                    {name:'Julie',phone:'555-8756'},
+                    {name:'Juliette',phone:'555-5678'}];
+  }]);
+  
+  </script>
+
+  <div ng-controller="ExampleController">
+    <label>Search:
+      <input ng-model="searchtext">
+    </label>
+    <table id="searchtextResults" border=2>
+      <tr>
+        <th id="n">Name</th>
+        <th>Phone</th>
+      </tr>
+      <tr ng-repeat="x in friends | filter:searchtextResults">
+        <td>{{x.name}}</td>
+        <td>{{x.phone}}</td>
+      </tr>
+    </table>
+  </div>
+
+</body>
+
+</html>

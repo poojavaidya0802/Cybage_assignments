@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Example</title>
+		<style>
+			.view{
+				border: 2px solid red;
+				width:100px;
+				height:100px;
+				
+				}
+		</style>
+	</head>
+	<body ng-app="ViewExample">
+		<p>See info about <a href="#dogs"> dogs</a> or <a href="#cats">cats</a></p>
+		
+		 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-route.js"></script>
+		<script>
+			angular.module('ViewExample',['ngRoute'])
+				.config(['$routeProvider',function($routeProvider){
+					$routeProvider.when('/dogs',{
+						template:'Dog belong to canine family'
+					});
+					
+					$routeProvider.when('/cats',{
+						templateUrl:'cat.html'
+					});
+				}]);
+		</script>
+		<div ng-view>
+		</div>
+	</body>
+	</html>

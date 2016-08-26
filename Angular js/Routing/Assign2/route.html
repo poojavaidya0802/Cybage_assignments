@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-route.js"></script>
+</head>
+
+<body ng-app="bindExample">
+
+	<p>First Application of SPA</p>
+	<br><a href="#/">Main</a>
+	<br><a href="#london">Link1</a>
+	<br><a href="#paris">Link2</a>
+	
+	
+	<div ng-view></div> 
+	<script>
+		var app = angular.module("bindExample",["ngRoute"]).config(function($routeProvider){
+			$routeProvider
+			.when("/",{
+				templateUrl:"route1.html",
+			})
+			.when("/london",{
+				templateUrl:"Partials/london.html",
+				controller:"londonCtrl"		
+			})
+			.when("/paris",{
+				templateUrl:"Partials/Paris.html",
+				controller:"parisCtrl"		
+			});
+		});
+
+		app.controller("londonCtrl",function($scope){
+			$scope.msg="I love London";	
+		});
+
+		app.controller("parisCtrl",function($scope){
+			$scope.msg="I love Paris";	
+		});		
+  
+	</script>
+
+
+</body>
+
+</html>

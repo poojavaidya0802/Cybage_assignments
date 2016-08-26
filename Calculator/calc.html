@@ -9,8 +9,8 @@
 		<center>
 			<h2>Calculator</h2>
 			<div class="Wrapper">	
-				<div class="screen" id="screen">
-					
+				<div class="screen">
+					<input id="screen">
 				</div>
 				<div class="keypad">
 					<button value="7" onclick="calculate(this)">7</button>
@@ -35,21 +35,19 @@
 		</center>
 
 		<script>
-			/*function calculate(elem){
-				concole.log(elem.value);
-			}*/
 			var buttons = document.getElementsByTagName('button');
 			for (var i = 0, len = buttons.length; i < len; i++) {
 				buttons[i].onclick = function (){
-					var first_no;
-					var second_no;
+					console.log(this.value);
 					if((this.value)=="reset"){
-						document.getElementById("screen").innerHTML=" ";
+						document.getElementById("screen").value=" ";
+					}
+					else if((this.value)=="="){
+						var result = eval(document.getElementById("screen").value);
+						document.getElementById("screen").value = result;
 					}
 					else{
-						document.getElementById("screen").innerHTML += this.value;
-						first_no = document.getElementById("screen").innerHTML;
-						console.log(first_no);
+						document.getElementById("screen").value += this.value;
 					}
 				}
 			}
