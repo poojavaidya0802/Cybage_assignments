@@ -1,0 +1,159 @@
+<body class="wrapper" >
+	<div class="Wrapper1" ng-hide="edit_view" ng-controller="author_controller">
+		<form>
+			<header class="heading">
+				<center><h2>Add New Author</h2></center>
+			</header>
+			
+			<div class="form-group row">
+				<label for="example-text-input" class="col-md-2 col-form-label">Name</label>
+				<div class="col-md-10">
+					<input class="form-control" type="text" placeholder="Enter your name" id="example-text-input" ng-model="emp_name">
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label for="example-number-input" class="col-md-2 col-form-label">Employee Id</label>
+				<div class="col-md-10">
+					<input class="form-control" type="number" placeholder="Enter Employee Id" id="example-number-input" ng-model="empid">
+				</div>
+			</div>
+			
+			<div class="form-group row">
+				<label for="example-email-input" class="col-md-2 col-form-label">Email</label>
+				<div class="col-md-10">
+					<input class="form-control" type="email" placeholder="Enter Email Id" id="example-email-input" ng-model="email">
+				</div>
+			</div>
+				
+			<div class="form-group row">
+				<label for="example-number-input" class="col-md-2 col-form-label">Skills</label>
+				<div class="col-md-10">
+					<label class="form-check-inline">
+						<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" ng-model="one">Node.js
+					</label>
+				
+					<label class="form-check-inline">
+						<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">Python
+					</label>
+				
+					<label class="form-check-inline">
+						<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">Javascript
+					</label>
+					
+					<label class="form-check-inline">
+						<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">React
+					</label>
+	
+					<label class="form-check-inline">
+						<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">PHP
+					</label>
+				</div>
+			</div> <!--end of check box row-->
+
+			<div class="form-group row">
+				<label for="example-text-input" class="col-md-2 col-form-label">Department</label>
+				<div class="col-md-10">
+					<input class="form-control" type="text" placeholder="Enter your department" id="example-text-input" ng-model="dept">
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label for="example-url-input" class="col-md-2 col-form-label">Website</label>
+				<div class="col-md-10">
+					<input class="form-control" type="url" placeholder="Enter website" id="example-url-input" ng-model="website">
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<div class="offset-lg-2 col-lg-10">
+					<center><button type="submit" class="btn btn-primary" ng-click="func_save()">Save</button></center>
+				</div>
+			</div>
+		</form>
+	</div> <!--end of Wrapper1-->	
+			
+	<div class="Wrapper2" ng-hide="add_view">
+		<header class="heading">
+			<center><h2>Author Details</h2></center>
+		</header>
+			
+			<div class="form-group row">
+				<label for="example-text-input" class="col-md-2 col-form-label">Name</label>
+				<div class="col-md-10">
+					<span ng-hide="!edit_clicked" ng-bind="newAuthor.name"></span>
+					<input ng-hide="edit_clicked" class="form-control" type="text" placeholder="Enter your name" id="example-text-input" ng-model="emp_name">
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label for="example-number-input" class="col-md-2 col-form-label">Employee Id</label>
+				<div class="col-md-10">
+					<span ng-hide="!edit_clicked" ng-bind="newAuthor.empid"></span>
+					<input class="form-control" ng-hide="edit_clicked" type="number" placeholder="Enter Employee Id" id="example-number-input" ng-model="empid">
+				</div>
+			</div>
+			
+			<div class="form-group row">
+				<label for="example-email-input" class="col-md-2 col-form-label">Email</label>
+				<div class="col-md-10">
+					<span ng-hide="!edit_clicked" ng-bind="newAuthor.email"></span>
+					<input class="form-control" ng-hide="edit_clicked" type="email" placeholder="Enter Email Id" id="example-email-input" ng-model="email">
+				</div>
+			</div>
+				
+			<div class="form-group row">
+				<label for="example-number-input" class="col-md-2 col-form-label">Skills</label>
+				<div class="col-md-10">
+					<span ng-bind="newAuthor.skills"></span>
+				</div>
+				<div class="col-md-10">
+					<label class="form-check-inline">
+						<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" ng-model="one">Node.js
+					</label>
+				
+					<label class="form-check-inline">
+						<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">Python
+					</label>
+				
+					<label class="form-check-inline">
+						<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">Javascript
+					</label>
+					
+					<label class="form-check-inline">
+						<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">React
+					</label>
+	
+					<label class="form-check-inline">
+						<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">PHP
+					</label>
+				</div>
+			</div> <!--end of check box row-->
+
+			<div class="form-group row">
+				<label for="example-text-input" class="col-md-2 col-form-label">Department</label>
+				<div class="col-md-10">
+					<span ng-hide="!edit_clicked" ng-bind="newAuthor.department"></span>
+					<input class="form-control" ng-hide="edit_clicked" type="text" placeholder="Enter your department" id="example-text-input" ng-model="dept">
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label for="example-url-input" class="col-md-2 col-form-label">Website</label>
+				<div class="col-md-10">
+					<span ng-hide="!edit_clicked" ng-bind="newAuthor.website"></span>
+					<input ng-hide="edit_clicked" class="form-control" type="url" placeholder="Enter website" id="example-url-input" ng-model="website">
+				</div>
+			</div>
+			<div class="form-group row">
+				<div class="offset-lg-2 col-lg-10">
+					<center>
+						<button type="submit" class="btn btn-primary" ng-click="func_edit()">Edit</button>
+						<button type="submit" ng-hide="!edit_clicked" class="btn btn-primary" ng-click="func_delete()">Delete</button>
+
+						<button ng-hide="edit_clicked" type="submit" ng-click="func_edit_save()" class="btn btn-primary">Save</button>
+					</center>
+				</div>
+			</div>
+	</div>	<!--end of Wrapper2-->
+</body>
