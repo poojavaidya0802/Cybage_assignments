@@ -1,0 +1,29 @@
+<html>
+<head>
+	<meta charset="utf-8">
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-route.js"></script>
+	<script>
+		var app = angular.module('plunker', ['ui']);
+
+app.controller('MyCtrl', function($scope) {
+    $scope.records = [ { "Id": 1 }, { "Id": 2 }, { "Id": 3 } ];
+    $scope.selected = {};
+    $scope.ShowSelected = function() {
+      $scope.records = $.grep($scope.records, function( record ) {
+        return $scope.selected[ record.Id ];
+      });
+    };      
+});
+	</script>
+</head>
+<body ng-app="plunker">
+<div data-ng-controller="MyCtrl">
+    <ul>
+        <li data-ng-repeat="record in records">
+            <input type="checkbox" ng-model="selected[record.Id]"> {{record.Id}}
+        </li>
+    </ul>
+    <a href="javascript:;" data-ng-click="ShowSelected()">Show Selected</a>
+</div>
+</body>
