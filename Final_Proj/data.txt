@@ -1,0 +1,16 @@
+/*$scope.names = [
+					{"_id":"57ce88cecb64a9b97acc0e52","isbn":"ISBN-123-3456-789",
+					"title":"Learning Node.js",
+					"author":"Ashwin Hegde",
+					"price":350,
+					"availableOn":["Amazon","eBay","Flipkart"]},
+					
+					{"_id":"57ce88cecb64a9b97acc0e53",
+					"isbn":"ISBN-987-8765-876",
+					"title":"Learning Knockout","author":"Jerin John","price":250,"availableOn":["Amazon","Flipkart"]},{"_id":"57ce88cecb64a9b97acc0e54","isbn":"ISBN-345-2342-123","title":"Learning Backbone","author":"Saju Sasidharan","price":250,"availableOn":["eBay","Flipkart"]},{"_id":"57ce88cecb64a9b97acc0e55","isbn":"ISBN-678-8765-098","title":"Learning React","author":"Ashwin Hegde","price":450,"availableOn":["Amazon","Flipkart"]},{"_id":"57ce88cecb64a9b97acc0e56","isbn":"ISBN-356-8935-548","title":"Learning Angular","author":"Saju Sasidharan","price":650,"availableOn":["Amazon","eBay","Flipkart"]},{"_id":"57ce88cecb64a9b97acc0e57","isbn":"ISBN-098-7896-009","title":"Learning Go","author":"Ashwin Hegde","price":150,"availableOn":["Amazon"]},{"_id":"57ce88cecb64a9b97acc0e58","isbn":"ISBN-642-9764-086","title":"Learning Team Management","author":"Ajay Sajwan","price":340,"availableOn":["Amazon","Flipkart"]},{"_id":"57ce88cecb64a9b97acc0e59","isbn":"ISBN-153-2436-483","title":"Project Management","author":"Kumar Kundan","price":650,"availableOn":["Amazon","eBay","Flipkart","Google"]},{"_id":"57ce88cecb64a9b97acc0e5a","isbn":"ISBN-243-4356-812","title":"Delivery Management","author":"Kumar Kundan","price":750,"availableOn":["Amazon","Flipkart"]}];
+				*/	
+				
+				
+$rootScope.names=[{"_id":"57d10f69aeed8542a847c85b","empid":1,"name":"Ashwin Hegde","email":"ashwinh@gmail.com","skills":["Node.js","JavaScript","Go","Python","PHP","Backbone","React"],"department":"Engineering","website":"https://en.wikipedia.org/wiki/User:Hegdeashwin"},{"_id":"57d10f69aeed8542a847c85c","empid":2,"name":"Jerin John","email":"jerinj@gmail.com","skills":["JavaScript","Backbone","Knockout","Java","HTML","CSS"],"department":"Engineering","website":null},{"_id":"57d10f69aeed8542a847c85d","empid":3,"name":"Saju Sasidharan","email":"sajus@gmail.com","skills":["JavaScript","Backbone","Angular","HTML","CSS"],"department":"Engineering","website":null},{"_id":"57d10f69aeed8542a847c85e","empid":4,"name":"Kumar Kundan","email":"kkundan@gmail.com","skills":["Project Management","Communication","Delivery Management"],"department":"Management","website":null},{"_id":"57d10f69aeed8542a847c85f","empid":5,"name":"Ajay Sajwan","email":"ajays@gmail.com","skills":["Team Management","Communication"],"department":"Management","website":null},{"_id":"57d11de7d74a7801044a67b1","empid":123,"name":"JKRowling","email":"sff@gmail.com","__v":0,"skills":[],"department":"ST","website":"sf"},{"_id":"57d11e45d74a7801044a67b5","empid":1234,"name":"JKRowleeing","email":"ass@cy.com","__v":0,"skills":[],"department":"sf","website":"dsf"},{"_id":"57d11e92d74a7801044a67b6","empid":123,"name":"fsf","email":"sfs@adf.com","__v":0,"skills":["mn,nm,nm"],"department":"sdfsf","website":"sdf"}];
+			//console.log($location.search());					
+				

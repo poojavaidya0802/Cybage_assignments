@@ -1,0 +1,22 @@
+validations of books
+deletion of book and author
+why param?
+
+folder = {
+	node: false,
+	python: false
+};
+
+skills = ['python'];
+
+for(i=0;i<skills.length;i++){	
+	folder[skills[i]]=true;
+}
+
+
+
+folder.python = true;
+folder["python"]=true;
+
+folder["crazy"]=true;
+
